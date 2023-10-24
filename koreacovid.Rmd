@@ -67,3 +67,4 @@ Based on the Chisquare and Fisher test, the result shows that if you are a man, 
 
 ## Conclusions
 
+First, we looked at the data available in kRdata and confirmed that this was a category~category problem. After determining this, we knew we used our Cat~Cat helper files to run a ggplot test. After seeing the result of the ggplot, we decided that of the people who get COVID, and women appear to get COVID at a higher rate. Of the people who got COVID, men died more than women. However, we needed to run more tests to confirm. 
