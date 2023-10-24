@@ -33,18 +33,28 @@ According to the data found under data, we are trying to determine if there is a
 
 
 ## Graphical results - use ggplot commands to do this  
-
-
-
+```{r}
+dd2 <- kRdata %>% group_by(result,Sex) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
   
-
-
-
-
-
+# the group_by followed by summarize(count=n())
+basicC <- ggplot(dd2,aes(x=result,y=count,fill=Sex))
+basicC + geom_bar(stat="identity",position="dodge")
+#Now for percentage plot
+basicCC <- ggplot(dd2,aes(x=result,y=prcnt*100,fill=Sex)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
   
+  
+When viewing the first chart, it shows that more women got COVID than men. When looking at the second graph, the results show that more men were being killed than women in the whole group of people that got COVID.     
+
+
 ## Numerical results
-
+```{r}
+table2 <- xtabs(~result + Sex, data=kRdata)
+rowPerc(table2)
+colPerc(table2)
+```
+These results confirmed the data we saw in the ggplot results. Which was that women got COVID at a higher rate than men. However, of the people who got COVID, more men died than women.
 
 ## Inferential results 
 
