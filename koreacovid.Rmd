@@ -57,9 +57,13 @@ colPerc(table2)
 These results confirmed the data we saw in the ggplot results. Which was that women got COVID at a higher rate than men. However, of the people who got COVID, more men died than women.
 
 ## Inferential results 
+```{r}
+chisq.test(table2)
+chisqtestGC(table2)
+fisher.test(table2)
+```
 
-
-
+Based on the Chisquare and Fisher test, the result shows that if you are a man, you are twice as likely to die from COVID as a woman.   	
 
 ## Conclusions
 
