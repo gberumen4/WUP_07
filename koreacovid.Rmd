@@ -27,8 +27,8 @@ state of a patient must be died or alive - we adjust that as well
   
 # Your Question - Is dying independent of sex?
 
-
-
+# Method
+According to the data found under data, we are trying to determine if there is a difference in the category Sex (male/female) about COVID-19. We could prove if the virus is more harmful to men or women based on the percentage of people from each group that passes away after contracting it. We can reach this conclusion using Cat~Cat helper files from the CandP zip to help us decipher these statistics.
 
 
 
